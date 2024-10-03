@@ -3,7 +3,7 @@
 import React from "react";
 
 type Props = {
-  onClick: () => void;
+  onClick?: () => void;
   label: string;
 };
 
