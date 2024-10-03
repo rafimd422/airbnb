@@ -1,6 +1,6 @@
 "use client";
 
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { IconType } from "react-icons";
 
@@ -11,31 +11,15 @@ type Props = {
 };
 
 function CategoryBox({ icon: Icon, label, selected }: Props) {
-  // const router = useRouter();
+  const router = useRouter();
   // const params = useSearchParams();
 
 
-const handleClick = () => {}
-  // const handleClick = useCallback(() => {
-  //   // const current = new URLSearchParams(params?.toString() || "");
+const handleClick = () => {
+  console.log({label})
+  router.push(`/category=${label}`)
+}
 
-  //   // if (params?.get("category") === label) {
-  //   //   current.delete("category");
-  //   // } else {
-  //   //   current.set("category", label);
-  //   // }
-
-  //   // const queryString = current.toString();
-  //   // const newUrl = queryString ? `/?${queryString}` : "/";
-
-  //   // console.log({
-  //   //   current,
-  //   //   queryString,
-  //   //   newUrl
-  //   // })
-
-  //   // router.push(newUrl);
-  // }, [label, params, router]);
 
   return (
     <div
