@@ -13,11 +13,9 @@ type ModalData = {
 
 
 
-
-
 const Search = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [step, setStep] = useState(0); // Track the modal step
+  const [step, setStep] = useState(0);
   const [locationLabel, setLocationLabel] = useState("Anywhere");
   const [durationLabel, setDurationLabel] = useState("Any Week");
   const [guestLabel, setGuestLabel] = useState("Add Guests");
@@ -30,7 +28,7 @@ const Search = () => {
   const closeModal = () => setIsModalOpen(false);
 
   const handleModalSubmit = (data:ModalData) => {
-    // Update labels based on step and data passed from modal
+
     if (step === 0) setLocationLabel(data.locationLabel);
     if (step === 1) setDurationLabel(data.durationLabel);
     if (step === 2) setGuestLabel(data.guestLabel);

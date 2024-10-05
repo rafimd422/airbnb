@@ -12,7 +12,6 @@ type Props = {
 
 function CategoryBox({ icon: Icon, label, selected }: Props) {
   const router = useRouter();
-  // const params = useSearchParams();
 
 
 const handleClick = () => {
