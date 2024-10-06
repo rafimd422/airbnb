@@ -1,25 +1,18 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { IconType } from "react-icons";
 
 type Props = {
   icon: IconType;
   label: string;
   selected?: boolean;
+  onClick: (label: string) => void;
 };
 
-function CategoryBox({ icon: Icon, label, selected }: Props) {
-  const router = useRouter();
-
-
-const handleClick = () => {
-
-}
-
+function CategoryBox({ icon: Icon, label, selected, onClick }: Props) {
   return (
     <div
-      onClick={handleClick}
+      onClick={() => onClick(label)} 
       className={`flex flex-col items-center justify-center gap-2 p-3 border-b-2 hover:text-neutral-800 transition cursor-pointer ${
         selected ? "border-b-neutral-800" : "border-transparent"
       } ${selected ? "text-neutral-800" : "text-neutral-500"}`}

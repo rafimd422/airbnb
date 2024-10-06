@@ -15,7 +15,7 @@ import {
 import { IoDiamond } from "react-icons/io5";
 import { MdOutlineVilla } from "react-icons/md";
 import { TbBeach, TbMountain, TbPool } from "react-icons/tb";
-import CategoryBox from "../CategoryBox"; 
+import CategoryBox from "../CategoryBox";
 
 export const categories = [
   {
@@ -95,22 +95,27 @@ export const categories = [
   },
 ];
 
+type CategoriesProps = {
+  onSelectCategory: (label: string) => void; 
+  selectedCategory: string | null;
+};
 
-const Categories = () => {
-
+const Categories: React.FC<CategoriesProps> = ({ onSelectCategory, selectedCategory }) => {
   return (
     <div className="max-w-[2520px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4">
       <div className="pt-4 flex flex-row items-center justify-between overflow-x-auto">
-        {categories.map((items, index) => (
+        {categories.map((item) => (
           <CategoryBox
-            key={index}
-            icon={items.icon}
-            label={items.label}
-            selected={false} />
+            key={item.label}
+            icon={item.icon}
+            label={item.label}
+            selected={selectedCategory === item.label}
+            onClick={onSelectCategory}
+          />
         ))}
       </div>
-      </div>
+    </div>
   );
-}
+};
 
 export default Categories;
