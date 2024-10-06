@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import React from "react";
 import { IconType } from "react-icons";
 
 type Props = {
@@ -18,7 +17,6 @@ const handleClick = () => {
   console.log({label})
   router.push(`/category=${label}`)
 }
-
 
   return (
     <div
