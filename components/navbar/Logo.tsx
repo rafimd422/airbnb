@@ -5,9 +5,12 @@ import React from "react";
 import logo from '@/app/assets/logo.png'
 
 function Logo() {
+  const handleReload = () => {
+    window.location.reload();
+  };
 
   return (
-    <div>
+    <div onClick={handleReload}>
       <Image
         alt="logo"
         className="hidden md:block cursor-pointer"

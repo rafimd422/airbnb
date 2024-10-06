@@ -20,7 +20,7 @@ const useListings = (category: string | null) => {
     fetchListings();
   }, [category]);
 
-  return { listings, loading };
+  return { listings,setListings, loading };
 };
 
 export default useListings;
