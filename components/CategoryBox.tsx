@@ -14,8 +14,7 @@ function CategoryBox({ icon: Icon, label, selected }: Props) {
 
 
 const handleClick = () => {
-  console.log({label})
-  router.push(`/category=${label}`)
+
 }
 
   return (
