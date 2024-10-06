@@ -9,7 +9,7 @@ const useListings = (category: string | null) => {
     const fetchListings = async () => {
       setLoading(true);
       try {
-        const url = category ? `http://localhost:4000/listing?category=${category}` : "http://localhost:4000/listing";
+        const url = category ? `https://airbnb-server-sage.vercel.app/listing?category=${category}` : "https://airbnb-server-sage.vercel.app/listing";
         const response = await axios.get(url);  
         setLoading(false);
         setListings(response.data);
