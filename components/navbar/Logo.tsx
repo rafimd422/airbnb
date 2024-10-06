@@ -4,7 +4,9 @@ import Image from "next/image";
 import React from "react";
 import logo from '@/app/assets/logo.png'
 
-function Logo() {
+
+const Logo:React.FC = () => {
+
   const handleReload = () => {
     window.location.reload();
   };
